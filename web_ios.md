@@ -32,3 +32,12 @@ if (value.length > 11) {
           this.phone = value.slice(0, 11);
         }
 ```
+
+3.关于在vue使用better-scroll的一些问题
+ 3.1 监听事件例如`scrollEnd`,代码如下：
+ ```
+ this.scroll.on('scrollEnd', (pos) => {
+            console.log(this.maxScrollY,this.scroll.maxScrollY)
+          })
+ ```
+ 尽管在调试器中能看到`this.maxScrollY`的值，实际上这时的this是指向vue的而不是函数的，所以会出现问题。使用`this.scroll.maxScrollY`或者改用普通函数能避免问题
