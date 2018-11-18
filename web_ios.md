@@ -12,6 +12,7 @@ body {
   overflow: auto;
 }
 ```
+3.解决ios滑动不流畅`-webkit-overflow-scrolling:touch;`
 
 
 
