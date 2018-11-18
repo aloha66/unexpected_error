@@ -45,3 +45,9 @@ if (value.length > 11) {
  
 4. 关于使用`Intl.DateTimeFormat`来优化大量格式化日期，ios10以下不支持，polyfill无果。
 5.`date.toLocaleString`在ios10以下的表现不如其他平台，需单独处理
+
+
+
+
+# 微信端（X5）
+1. 使用js-cookie,设置cookie，默认有效时间是session，甚至时间默认有点怪异，建议手动添加一个到期时间。在PC端，默认有效时间是永久。
