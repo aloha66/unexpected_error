@@ -41,3 +41,7 @@ if (value.length > 11) {
           })
  ```
  尽管在调试器中能看到`this.maxScrollY`的值，实际上这时的this是指向vue的而不是函数的，所以会出现问题。使用`this.scroll.maxScrollY`或者改用普通函数能避免问题
+ 
+ 
+4. 关于使用`Intl.DateTimeFormat`来优化大量格式化日期，ios10以下不支持，polyfill无果。
+5.`date.toLocaleString`在ios10以下的表现不如其他平台，需单独处理
