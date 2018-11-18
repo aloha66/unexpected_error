@@ -18,4 +18,5 @@ pre {
 }`
 
 # js
-在用axios进行OAuth2认证传参的时候，必须引入qs库进行序列化
+1. 在用axios进行OAuth2认证传参的时候，必须引入qs库进行序列化
+2. `robust-websocket`一个包含心跳检测、重连的库，简单易用
