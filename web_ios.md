@@ -15,6 +15,15 @@ body {
 3.解决ios滑动不流畅`-webkit-overflow-scrolling:touch;`
 
 
+## 有赞
+### vant@1.5.1
+1. 当下拉刷新组件包含popup组件时，popup的高度固定为内容高度，解决方案
+ ```
+ .van-pull-refresh__head + div {
+    min-height: 100vh
+}
+ ```
+
 
 # js
 1. 当输入文字的时候，`input`、'textarea'会下沉，，需要在`focus`和`input`的时候处理，在`blur`释放处理结果。解决方案有两个
