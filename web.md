@@ -23,7 +23,7 @@ pre {
 
 ## vue
 
-a使用proxy处理跨域请求地址必须是相对路径，否则跨域失效
+1. 使用proxy处理跨域请求地址必须是相对路径，否则跨域失效
 ```
 // bad
 axios.get("http://localhost:4000/test");
@@ -31,4 +31,11 @@ axios.get("http://localhost:4000/test");
 // good
 axios.get("/test");
 
+```
+2. cli3.3
+```
+new HtmlWebpackPlugin({
+  template: "public/index.html",
+  }
+  指定template后，BASE_URL失效？？？ 删除或重新指定即可
 ```
