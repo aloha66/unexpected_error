@@ -35,9 +35,11 @@ body {
         document.querySelector('textarea').scrollIntoView()简单使用即可。
   上述方案，需要加入`setInterval`持续执行，单次的`setTimeout`不一定成功。其次发现一台iPhone7 ios11对这两种解决方案无效。
 
-2.解决ios和安卓必须输入数字，限制长度（可能安卓没有问题）
+2.解决ios和安卓必须输入数字，限制长度（安卓没有问题,ios所有字符都能输），`type="number"`导致maxlength失效。
 ```
-<input type="number">type必须为number，用tel还可以输入文字，maxlength也有问题？我已经不记得具体是ios还是安卓的不同表现了
+<input v-model="age" type="number" pattern="[0-9]*">
+// type="number" pc和安卓正常表现，ios需要加入pattern="[0-9]*"
+由于maxlength失效，正则pattern限制字数无果，还是采用js控制长度
 if (value.length > 11) {
           this.phone = value.slice(0, 11);
         }
