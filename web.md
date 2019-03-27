@@ -39,3 +39,6 @@ new HtmlWebpackPlugin({
   }
   指定template后，BASE_URL失效？？？ 删除或重新指定即可
 ```
+3. ivivew 3.3.3
+
+按需加载时候，像`Message`之类的组件需要绑定到Vue的原型`Vue.prototype.$Message = Message`
