@@ -20,6 +20,7 @@ pre {
 # js
 1. 在用axios进行OAuth2认证传参的时候，必须引入qs库进行序列化
 2. `robust-websocket`一个包含心跳检测、重连的库，简单易用
+3. 数据库返回的时间若相差8小时，前端用`new Date(time)`解决
 
 ## vue
 
